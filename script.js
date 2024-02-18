@@ -9,18 +9,30 @@ document.addEventListener("DOMContentLoaded", function() {
         backgroundMusic.play();
     });
 
-    // Compte à rebours pour la div "Save the date"
-    const countdownElement = document.getElementById('countdown');
-    const weddingDate = new Date('2024-05-17T08:30:00'); // Date du mariage
-    setInterval(function() {
-        const now = new Date();
-        const timeDiff = weddingDate - now;
-        const days = Math.floor(timeDiff / (1000 * 60 * 60 * 24));
-        const hours = Math.floor((timeDiff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-        const minutes = Math.floor((timeDiff % (1000 * 60 * 60)) / (1000 * 60));
-        const seconds = Math.floor((timeDiff % (1000 * 60)) / 1000);
-        countdownElement.innerHTML = `${days}j ${hours}h ${minutes}m ${seconds}s`;
-    }, 1000);
+    // // Compte à rebours pour la div "countdown"
+    // const countdownElements = {
+    //     days: document.getElementById('days'),
+    //     hours: document.getElementById('hours'),
+    //     minutes: document.getElementById('minutes'),
+    //     seconds: document.getElementById('seconds')
+    // };
+    //
+    // const weddingDate = new Date('2024-05-17T08:30:00'); // Date du mariage
+    //
+    // setInterval(function() {
+    //     const now = new Date();
+    //     const timeDiff = weddingDate - now;
+    //     const days = Math.floor(timeDiff / (1000 * 60 * 60 * 24));
+    //     const hours = Math.floor((timeDiff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    //     const minutes = Math.floor((timeDiff % (1000 * 60 * 60)) / (1000 * 60));
+    //     const seconds = Math.floor((timeDiff % (1000 * 60)) / 1000);
+    //
+    //     // Mettre à jour les éléments HTML avec les valeurs du compte à rebours
+    //     countdownElements.days.textContent = days;
+    //     countdownElements.hours.textContent = hours;
+    //     countdownElements.minutes.textContent = minutes;
+    //     countdownElements.seconds.textContent = seconds;
+    // }, 1000);
 
     // Afficher/masquer le champ pour le nombre de personnes selon la réponse à la présence
     const attendanceRadioYes = document.getElementById('yes');

@@ -1,18 +1,24 @@
 body {
     margin: 0;
     padding: 0;
-    background-color: #162A35;
+    background-color: black;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .imgContainer {
-    position: relative; /* Position relative pour contenir l'image et le layer */
+    position: relative;
 }
 
 .imgCard {
-    max-width: 100%; /* Reduire la taille de l'image */
+    max-width: 60%;
     height: auto;
     display: block;
-    margin: 0 auto; /* Centrer l'image horizontalement */
+    margin: 0 auto;
 }
 
 #invitationLayer {
@@ -24,14 +30,14 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #162a35; /* Fond noir semi-transparent */
+    background-color: #162a35;
 }
 
 .layerImg {
-    width: 70%; /* Réduire la taille de l'image du layer */
+    width: 70%;
     height: auto;
     display: block;
-    z-index: 1; /* Assurez-vous que l'image du layer est au-dessus du fond noir */
+    z-index: 1;
 }
 
 #showInvitationBtn {
@@ -42,44 +48,165 @@ body {
     padding: 15px 30px;
     font-size: 22px;
     z-index: 2;
-    background-color: #ffffff; /* Couleur de fond */
-    color: #000000; /* Couleur du texte */
-    border: 2px solid transparent; /* Bordure transparente */
-    border-radius: 20px; /* Bordures arrondies */
-    transition: box-shadow 0.3s, border-color 0.3s; /* Transition */
+    background-color: #ffffff;
+    color: #162a35;
+    border: 2px solid transparent;
+    border-radius: 20px;
+    transition: box-shadow 0.3s, border-color 0.3s;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 #showInvitationBtn:focus,
 #showInvitationBtn:hover {
-    outline: none; /* Supprimer le contour par défaut */
-    border-color: #ffffff; /* Bordure pour le focus et le hover */
-    box-shadow: 0px 0px 20px rgba(255, 255, 255, 0.7); /* Effet glowy sur focus et hover */
+    outline: none;
+    border-color: #ffffff;
+    box-shadow: 0px 0px 20px rgba(255, 255, 255, 0.7);
 }
 
 button#showInvitationBtn img {
-    width: 20px; /* Taille de l'image */
-    margin-left: 5px; /* Espacement entre le texte et l'image */
-}
-
-
-
-/* Ajoutez ces styles pour aligner les div en colonne */
-.container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    width: 20px;
+    margin-left: 5px;
 }
 
 .saveTheDate, .location, .RSVP {
     margin-top: 20px;
-    text-align: center; /* Centre le contenu des div */
+    text-align: center;
+    background-color: #ffffff;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 5px 5px 8px rgb(255, 255, 255);
+    width: 80%;
 }
 
-/* Styles pour les éléments du formulaire RSVP */
+h2 {
+    color: #162A35;
+}
+
+.RSVP {
+    background-color: #FFFFFF;
+    border-radius: 10px;
+    color: #162A35;
+    padding: 20px;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.25);
+    width: 400px; /* Ajustez la largeur selon vos besoins */
+    margin: 20px auto;
+}
+
+.RSVP h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
 .RSVP label {
     display: block;
     margin-bottom: 10px;
 }
 
+.RSVP input[type="text"],
+.RSVP input[type="number"] {
+    font-size: 15px;
+    color: #666;
+    padding: 6px;
+    margin: 10px auto;
+    display: block;
+    width: 75%;
+    border: none;
+    border-bottom: 1px solid #ccc; /* Ajoute une bordure en bas */
+    outline: none;
+}
 
+.RSVP input[type="radio"] {
+    display: none;
+}
+
+.RSVP input[type="radio"] + label {
+    display: inline-block;
+    margin-right: 10px;
+    padding: 5px 10px;
+    cursor: pointer;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.RSVP input[type="radio"]:checked + label {
+    background-color: #162A35;
+    color: #FFFFFF;
+}
+
+.RSVP #guestsNum {
+    display: none;
+}
+
+.RSVP input[type="number"] {
+    font-size: 15px;
+    color: #162A35;
+    padding: 6px;
+    margin: 10px auto 20px;
+    display: block;
+    width: 75%;
+    border: none;
+    border-bottom: 1px solid #ccc; /* Ajoute une bordure en bas */
+    outline: none;
+}
+
+.RSVP input[type="submit"] {
+    background-color: #FFFFFF;
+    color: #162A35;
+    border: none;
+    font-family: 'Raleway';
+    font-size: 18px;
+    font-weight: 600;
+    padding: 15px 32px;
+    width: 200px;
+    margin: 20px auto 0;
+    border-radius: 0px 0px 10px 10px;
+    cursor: pointer;
+    transition: background-color 0.5s;
+}
+
+.RSVP input[type="submit"]:hover {
+    background-color: #162A35;
+    color: #FFFFFF;
+    transition: background-color 0.5s;
+}
+
+.RSVP input:focus {
+    border-bottom: 1px solid #162A35; /* Changement de la couleur de la bordure en focus */
+    outline: none;
+}
+
+
+/*#countdown {*/
+/*    display: flex;*/
+/*    justify-content: center;*/
+/*    align-items: center;*/
+/*    font-size: 24px;*/
+/*    margin-top: 20px;*/
+/*}*/
+
+/*.countdown-item {*/
+/*    display: flex;*/
+/*    flex-direction: column;*/
+/*    align-items: center;*/
+/*    margin: 0 10px;*/
+/*    background-color: #ffffff;*/
+/*    border-radius: 10px;*/
+/*    padding: 10px;*/
+/*    box-shadow: 5px 5px 8px rgba(0, 0, 0, 0.1);*/
+/*}*/
+
+/*.countdown-item span:first-child {*/
+/*    font-size: 32px;*/
+/*    color: #162A35;*/
+/*}*/
+
+/*.countdown-item span:last-child {*/
+/*    font-size: 16px;*/
+/*    color: #162A35;*/
+/*}*/
+
+/*.countdown-dot {*/
+/*    color: #ffffff;*/
+/*    font-size: 24px;*/
+/*    margin: 0 5px;*/
+/*}*/
