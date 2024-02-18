@@ -1,6 +1,7 @@
 body {
     margin: 0;
     padding: 0;
+    background-color: #162A35;
 }
 
 .imgContainer {
@@ -8,7 +9,7 @@ body {
 }
 
 .imgCard {
-    max-width: 80%; /* Reduire la taille de l'image */
+    max-width: 100%; /* Reduire la taille de l'image */
     height: auto;
     display: block;
     margin: 0 auto; /* Centrer l'image horizontalement */
@@ -23,7 +24,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: rgba(0, 0, 0, 0.5); /* Fond noir semi-transparent */
+    background-color: #162a35; /* Fond noir semi-transparent */
 }
 
 .layerImg {
@@ -35,13 +36,33 @@ body {
 
 #showInvitationBtn {
     position: absolute;
-    top: 50%;
+    top: 75%;
     left: 50%;
     transform: translate(-50%, -50%);
-    padding: 10px 20px;
-    font-size: 16px;
-    z-index: 2; /* Assurez-vous que le bouton est au-dessus de l'image du layer */
+    padding: 15px 30px;
+    font-size: 22px;
+    z-index: 2;
+    background-color: #ffffff; /* Couleur de fond */
+    color: #000000; /* Couleur du texte */
+    border: 2px solid transparent; /* Bordure transparente */
+    border-radius: 20px; /* Bordures arrondies */
+    transition: box-shadow 0.3s, border-color 0.3s; /* Transition */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
+
+#showInvitationBtn:focus,
+#showInvitationBtn:hover {
+    outline: none; /* Supprimer le contour par défaut */
+    border-color: #ffffff; /* Bordure pour le focus et le hover */
+    box-shadow: 0px 0px 20px rgba(255, 255, 255, 0.7); /* Effet glowy sur focus et hover */
+}
+
+button#showInvitationBtn img {
+    width: 20px; /* Taille de l'image */
+    margin-left: 5px; /* Espacement entre le texte et l'image */
+}
+
+
 
 /* Ajoutez ces styles pour aligner les div en colonne */
 .container {
