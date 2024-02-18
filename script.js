@@ -9,31 +9,6 @@ document.addEventListener("DOMContentLoaded", function() {
         backgroundMusic.play();
     });
 
-    // // Compte à rebours pour la div "countdown"
-    // const countdownElements = {
-    //     days: document.getElementById('days'),
-    //     hours: document.getElementById('hours'),
-    //     minutes: document.getElementById('minutes'),
-    //     seconds: document.getElementById('seconds')
-    // };
-    //
-    // const weddingDate = new Date('2024-05-17T08:30:00'); // Date du mariage
-    //
-    // setInterval(function() {
-    //     const now = new Date();
-    //     const timeDiff = weddingDate - now;
-    //     const days = Math.floor(timeDiff / (1000 * 60 * 60 * 24));
-    //     const hours = Math.floor((timeDiff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-    //     const minutes = Math.floor((timeDiff % (1000 * 60 * 60)) / (1000 * 60));
-    //     const seconds = Math.floor((timeDiff % (1000 * 60)) / 1000);
-    //
-    //     // Mettre à jour les éléments HTML avec les valeurs du compte à rebours
-    //     countdownElements.days.textContent = days;
-    //     countdownElements.hours.textContent = hours;
-    //     countdownElements.minutes.textContent = minutes;
-    //     countdownElements.seconds.textContent = seconds;
-    // }, 1000);
-
     // Afficher/masquer le champ pour le nombre de personnes selon la réponse à la présence
     const attendanceRadioYes = document.getElementById('yes');
     const guestsNumDiv = document.getElementById('guestsNum');
@@ -57,6 +32,7 @@ document.addEventListener("DOMContentLoaded", function() {
         // Récupérer les données du formulaire
         const lastName = document.getElementById('lastName').value;
         const firstName = document.getElementById('firstName').value;
+        const eventi = document.getElementById('eventi').value;
 
         const attendance = document.querySelector('input[name="attendance"]:checked').value;
         const guests = document.getElementById('guests').value;
@@ -66,6 +42,7 @@ document.addEventListener("DOMContentLoaded", function() {
             lastName: lastName,
             firstName: firstName,
             attendance: attendance,
+            eventi: eventi,
             guests: guests
         }).then(function(response) {
             console.log("E-mail envoyé avec succès!", response);

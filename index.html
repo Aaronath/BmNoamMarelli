@@ -6,9 +6,10 @@
     <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
+
 <div class="container">
     <div class="imgContainer">
-        <img class="imgCard" src="IMG-20240218-WA0004.jpg">
+        <img class="imgCard" src="carteMdt.png">
         <div id="invitationLayer">
             <img class="layerImg" src="layer_img.png">
             <button id="showInvitationBtn">
@@ -18,59 +19,48 @@
         </div>
     </div>
 
-<!--    <div class="saveTheDate">-->
-<!--        <h2>Save the date</h2>-->
-<!--        <div id="countdown">-->
-<!--            <div class="countdown-item">-->
-<!--                <span id="days"></span>-->
-<!--                <span class="countdown-label">Jours</span>-->
-<!--            </div>-->
-<!--            <div class="countdown-dot">:</div>-->
-<!--            <div class="countdown-item">-->
-<!--                <span id="hours"></span>-->
-<!--                <span class="countdown-label">Heures</span>-->
-<!--            </div>-->
-<!--            <div class="countdown-dot">:</div>-->
-<!--            <div class="countdown-item">-->
-<!--                <span id="minutes"></span>-->
-<!--                <span class="countdown-label">Minutes</span>-->
-<!--            </div>-->
-<!--            <div class="countdown-dot">:</div>-->
-<!--            <div class="countdown-item">-->
-<!--                <span id="seconds"></span>-->
-<!--                <span class="countdown-label">Secondes</span>-->
-<!--            </div>-->
-<!--        </div>-->
-<!--    </div>-->
-
     <div class="location">
-        <h2>Location</h2>
-        <a target="_blank" href="https://maps.app.goo.gl/pg2G7o6HprAXv7oi6">Voir sur Google Maps</a>
+        <a class="btn" target="_blank" href="https://maps.app.goo.gl/pg2G7o6HprAXv7oi6">Voir sur Google Maps</a>
     </div>
 
-    <div class="RSVP">
+    <div class="rsvp-container">
         <h2>Merci de confirmer votre présence</h2>
         <form id="rsvpForm">
-            <label for="lastName">Nom:</label>
-            <input type="text" id="lastName" name="lastName" required><br><br>
+            <div class="input-group">
+                <label for="lastName">Nom:</label>
+                <input type="text" id="lastName" name="lastName" required>
+                <input type="text" id="eventi" name="eventi" required value="mise des téphilines" hidden>
 
-            <label for="firstName">Prénom:</label>
-            <input type="text" id="firstName" name="firstName" required><br><br>
+            </div>
 
-            <label for="attendance">Serez-vous présent ?</label><br>
-            <input type="radio" id="yes" name="attendance" value="yes" required>
-            <label for="yes">Oui</label><br>
-            <input type="radio" id="no" name="attendance" value="no">
-            <label for="no">Non</label><br><br>
+            <div class="input-group">
+                <label for="firstName">Prénom:</label>
+                <input type="text" id="firstName" name="firstName" required>
+            </div>
 
-            <div id="guestsNum" style="display: none;">
-                <label for="guests">Combien de personnes viendront avec vous ?</label><br>
+            <div class="input-group">
+                <label for="attendance">Serez-vous présent ?</label>
+                <div class="attendance-options">
+                    <input type="radio" id="yes" name="attendance" value="yes" required>
+                    <label for="yes">Oui</label>
+
+                    <input type="radio" id="no" name="attendance" value="no">
+                    <label for="no">Non</label>
+                </div>
+            </div>
+
+            <div id="guestsNum" class="input-group" style="display: none;">
+                <label for="guests">Combien de personnes viendront avec vous ?</label>
                 <input type="number" id="guests" name="guests" min="0" value="0">
             </div>
 
-            <input type="submit" value="Envoyer">
+            <input type="submit" value="Envoyer" class="submit-btn">
         </form>
     </div>
+
+
+
+
 </div>
 
 <audio id="backgroundMusic" src="background_music.mp3" loop></audio>

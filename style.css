@@ -1,7 +1,7 @@
 body {
     margin: 0;
     padding: 0;
-    background-color: black;
+    background: linear-gradient(to left top, #162a35, #0E0E26);
 }
 
 .container {
@@ -12,6 +12,7 @@ body {
 
 .imgContainer {
     position: relative;
+    margin-bottom: 10px;
 }
 
 .imgCard {
@@ -68,145 +69,107 @@ button#showInvitationBtn img {
     margin-left: 5px;
 }
 
-.saveTheDate, .location, .RSVP {
-    margin-top: 20px;
+.location {
     text-align: center;
-    background-color: #ffffff;
-    border-radius: 10px;
-    padding: 20px;
-    box-shadow: 5px 5px 8px rgb(255, 255, 255);
-    width: 80%;
 }
+
+.location h2 {
+    margin-bottom: 10px;
+}
+
+.location .btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.location .btn:hover {
+    background-color: #0056b3;
+}
+
 
 h2 {
     color: #162A35;
 }
 
-.RSVP {
-    background-color: #FFFFFF;
-    border-radius: 10px;
-    color: #162A35;
-    padding: 20px;
-    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.25);
-    width: 400px; /* Ajustez la largeur selon vos besoins */
+.rsvp-container {
+    max-width: max-content;
     margin: 20px auto;
+    padding: 20px;
+    background-color: #f5f5f5;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-.RSVP h2 {
+.rsvp-container h2 {
     text-align: center;
     margin-bottom: 20px;
 }
 
-.RSVP label {
+.input-group {
+    margin-bottom: 20px;
+}
+
+.input-group label {
     display: block;
-    margin-bottom: 10px;
+    margin-bottom: 5px;
 }
 
-.RSVP input[type="text"],
-.RSVP input[type="number"] {
-    font-size: 15px;
-    color: #666;
-    padding: 6px;
-    margin: 10px auto;
-    display: block;
-    width: 75%;
-    border: none;
-    border-bottom: 1px solid #ccc; /* Ajoute une bordure en bas */
-    outline: none;
-}
-
-.RSVP input[type="radio"] {
-    display: none;
-}
-
-.RSVP input[type="radio"] + label {
-    display: inline-block;
-    margin-right: 10px;
-    padding: 5px 10px;
-    cursor: pointer;
+.input-group input[type="text"],
+.input-group input[type="number"] {
+    width: 100%;
+    padding: 10px;
     border: 1px solid #ccc;
     border-radius: 5px;
+    box-sizing: border-box;
+    outline: none;
 }
 
-.RSVP input[type="radio"]:checked + label {
-    background-color: #162A35;
-    color: #FFFFFF;
+.attendance-options {
+    display: flex;
+    align-items: center;
 }
 
-.RSVP #guestsNum {
+.attendance-options input[type="radio"] {
     display: none;
 }
 
-.RSVP input[type="number"] {
-    font-size: 15px;
-    color: #162A35;
-    padding: 6px;
-    margin: 10px auto 20px;
-    display: block;
-    width: 75%;
-    border: none;
-    border-bottom: 1px solid #ccc; /* Ajoute une bordure en bas */
-    outline: none;
-}
-
-.RSVP input[type="submit"] {
-    background-color: #FFFFFF;
-    color: #162A35;
-    border: none;
-    font-family: 'Raleway';
-    font-size: 18px;
-    font-weight: 600;
-    padding: 15px 32px;
-    width: 200px;
-    margin: 20px auto 0;
-    border-radius: 0px 0px 10px 10px;
+.attendance-options input[type="radio"] + label {
+    margin-right: 10px;
+    padding: 10px 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
     cursor: pointer;
-    transition: background-color 0.5s;
 }
 
-.RSVP input[type="submit"]:hover {
-    background-color: #162A35;
-    color: #FFFFFF;
-    transition: background-color 0.5s;
+.attendance-options input[type="radio"]:checked + label {
+    background-color: #007bff;
+    color: #fff;
 }
 
-.RSVP input:focus {
-    border-bottom: 1px solid #162A35; /* Changement de la couleur de la bordure en focus */
-    outline: none;
+.submit-btn {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+.submit-btn:hover {
+    background-color: #0056b3;
 }
 
 
-/*#countdown {*/
-/*    display: flex;*/
-/*    justify-content: center;*/
-/*    align-items: center;*/
-/*    font-size: 24px;*/
-/*    margin-top: 20px;*/
-/*}*/
 
-/*.countdown-item {*/
-/*    display: flex;*/
-/*    flex-direction: column;*/
-/*    align-items: center;*/
-/*    margin: 0 10px;*/
-/*    background-color: #ffffff;*/
-/*    border-radius: 10px;*/
-/*    padding: 10px;*/
-/*    box-shadow: 5px 5px 8px rgba(0, 0, 0, 0.1);*/
-/*}*/
 
-/*.countdown-item span:first-child {*/
-/*    font-size: 32px;*/
-/*    color: #162A35;*/
-/*}*/
 
-/*.countdown-item span:last-child {*/
-/*    font-size: 16px;*/
-/*    color: #162A35;*/
-/*}*/
 
-/*.countdown-dot {*/
-/*    color: #ffffff;*/
-/*    font-size: 24px;*/
-/*    margin: 0 5px;*/
-/*}*/
