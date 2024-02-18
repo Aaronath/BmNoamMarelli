@@ -1,0 +1,64 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.imgContainer {
+    position: relative; /* Position relative pour contenir l'image et le layer */
+}
+
+.imgCard {
+    max-width: 80%; /* Reduire la taille de l'image */
+    height: auto;
+    display: block;
+    margin: 0 auto; /* Centrer l'image horizontalement */
+}
+
+#invitationLayer {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.5); /* Fond noir semi-transparent */
+}
+
+.layerImg {
+    width: 70%; /* Réduire la taille de l'image du layer */
+    height: auto;
+    display: block;
+    z-index: 1; /* Assurez-vous que l'image du layer est au-dessus du fond noir */
+}
+
+#showInvitationBtn {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 10px 20px;
+    font-size: 16px;
+    z-index: 2; /* Assurez-vous que le bouton est au-dessus de l'image du layer */
+}
+
+/* Ajoutez ces styles pour aligner les div en colonne */
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.saveTheDate, .location, .RSVP {
+    margin-top: 20px;
+    text-align: center; /* Centre le contenu des div */
+}
+
+/* Styles pour les éléments du formulaire RSVP */
+.RSVP label {
+    display: block;
+    margin-bottom: 10px;
+}
+
+
